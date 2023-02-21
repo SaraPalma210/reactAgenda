@@ -39,4 +39,9 @@ public class AgendaController {
         service.deleteAllAgenda();
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/agenda")
+    public ResponseEntity<?> getAllAgenda() {
+        return ResponseEntity.ok(service.getAllContactos());
+    }
 }
